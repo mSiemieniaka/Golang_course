@@ -21,6 +21,7 @@ func main() {
 	futureValue := investmentAmount * math.Pow(1+expectedReturnRate/100, years)
 	futureRealValue := futureValue / math.Pow(1+inflationRate/100, years)
 
+	// %v - domyslsna wartosc, %f wartosc krotsza mozna deklarowac ile liczb %.1f %.0f itp
 	// fmt.Println("Wartosc przyszlosciowa:", futureValue)
 	fmt.Printf("Wartosc przyszlosciowa: %v\nFuture Value (przy inflacji): %v", futureValue, futureRealValue)
 	//fmt.Println(futureRealValue)
