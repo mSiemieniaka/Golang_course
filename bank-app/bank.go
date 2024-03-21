@@ -28,7 +28,7 @@ func main() {
 
 		var choice int
 		fmt.Print("Twoj Wybor: ")
-		fmt.Scan(&choice)
+		fmt.Scan(&choice) //w Scan zawsze uzywamy wskaznika bo Scan robi tak ze pobiera wartosc z adresu zmiennej i potem nadpisuje ta wartosc stwierdzona wczesniej z wartoscia USERA
 
 		/* switch case metoda fajna lepsza hehe*/
 		// Warto zapamietac jak juz wejdziesz w switch case to nie mozna z niego wyjsc jedynie co mozemy zrobic to zakonczyc program wtedy jesli mamy kod
