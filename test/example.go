@@ -1,9 +1,17 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
+
+type Customstring string
+
+func (text Customstring) log() {
+	fmt.Println(text)
+
+}
 
 func main() {
-
-	fmt.Print("Dziala, hello")
-
+	var name Customstring = "max"
+	name.log()
 }

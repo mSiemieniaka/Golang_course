@@ -1,3 +1,3 @@
-module example/first-app
+module example/test
 
 go 1.21.5
