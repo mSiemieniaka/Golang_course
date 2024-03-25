@@ -4,6 +4,7 @@ import (
 	"fmt"
 )
 
+// ogolnie generics bardziej uzwasz to takiego kodu co np robi biblioteke i bedziesz musial komus to udeptepnic jako on tam bedzie robic jakies funkcje itp
 func main() {
 	result := add(1, 2)
 	fmt.Println(result)
