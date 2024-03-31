@@ -29,6 +29,9 @@ func main() {
 	dynamicList := []string{"GoDeveloper", "Devops"}
 	dynamicList[1] = "Cos innego"
 	dynamicList = append(dynamicList, "Macbook PRO")
+	// Laczenie dwoch list ponizej obczaj sobie
+	dynamicList2 := []string{"Pierwsze", "drugie", "trzecie"}
+	dynamicList = append(dynamicList, dynamicList2...)
 
 	listProduct := []Products{
 		{Title: "Ksiazka", ID: "ID01", Price: 59.99},
