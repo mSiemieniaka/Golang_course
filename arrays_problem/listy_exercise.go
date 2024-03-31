@@ -1,6 +1,22 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
+
+type Products struct {
+	Title string
+	ID    string
+	Price float64
+}
+
+func displayListStruct(listProduct []Products) {
+
+	for _, p := range listProduct {
+		fmt.Printf("Title: %s, ID: %s, Price: %.2f\n", p.Title, p.ID, p.Price)
+	}
+
+}
 
 func main() {
 	list1 := [3]string{"Football", "Basketball", "Coding"} //<-lista do podunku 1
@@ -14,11 +30,38 @@ func main() {
 	dynamicList[1] = "Cos innego"
 	dynamicList = append(dynamicList, "Macbook PRO")
 
+	listProduct := []Products{
+		{Title: "Ksiazka", ID: "ID01", Price: 59.99},
+		{Title: "Laptop", ID: "ID02", Price: 2500.99},
+	}
+
+	listProduct = append(listProduct, Products{Title: "Myszka", ID: "ID03", Price: 159.99})
+
+	//Moje rozwiazanie co jest bardzo statyczne
+	// var ksiazka products
+	// ksiazka.id = "ID01"
+	// ksiazka.title = "Wladca Pierscieni"
+	// ksiazka.price = 10.99
+
+	// var laptop products
+	// laptop.id = "ID27"
+	// laptop.title = "MacBook PRO"
+	// laptop.price = 2000.99
+
+	// var myszka products
+	// myszka.id = "ID03"
+	// myszka.title = "Razer DethAdder"
+	// myszka.price = 159.99
+
+	// listProduct := []products{ksiazka, laptop}
+	// listProduct = append(listProduct, myszka)
+
 	fmt.Println(list1)
 	fmt.Println(list1[0:1]) //<-lista do podunku 2 standalone
 	fmt.Println(list2)
 	fmt.Println(list3)
 	fmt.Println(dynamicList)
+	displayListStruct(listProduct)
 	//fmt.Println(list4)
 
 }
