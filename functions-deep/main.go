@@ -2,6 +2,8 @@ package main
 
 import "fmt"
 
+type transformFn func(int) int
+
 func main() {
 	numbers := []int{1, 2, 3, 4}
 	doubled := transformNumbers(&numbers, double)
@@ -12,7 +14,7 @@ func main() {
 }
 
 // bardzo przydatne bo wprowadzamy zmienna ktora przechowuja wybrana przez nas funkcje
-func transformNumbers(numbers *[]int, transform func(int) int) []int {
+func transformNumbers(numbers *[]int, transform transformFn) []int {
 
 	dNumbers := []int{}
 	for _, val := range *numbers {
