@@ -3,12 +3,18 @@ package main
 import "fmt"
 
 func main() {
-	var a float64
-	fmt.Scan(&a)
-	if a == 1 {
-		fmt.Printf("wygrales: %.0f\n", a)
+	prices := []float64{10, 20, 30}
+	taxRates := []float64{0, 0.7, 0.1, 0.15}
 
+	result := make(map[float64][]float64)
+
+	for _, taxRate := range taxRates {
+		taxIndludedPrices := make([]float64, len(prices))
+		for priceIndex, price := range prices {
+			taxIndludedPrices[priceIndex] = price * (1 + taxRate)
+		}
+		result[taxRate] = taxIndludedPrices
 	}
-	fmt.Println("jutro to zrobie")
 
+	fmt.Println(result)
 }
