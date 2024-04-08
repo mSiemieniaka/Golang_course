@@ -15,7 +15,7 @@ func slowGreet(pharse string) {
 }
 
 func main() {
-	greet("Nice to meet you")
-	greet("How are you")
-	slowGreet("How ... are ... you ...?")
+	go greet("Nice to meet you")
+	go greet("How are you")
+	go slowGreet("How ... are ... you ...?")
 }
